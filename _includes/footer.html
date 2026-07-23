@@ -96,26 +96,20 @@
     }
   </style>
 
-  <!-- Busuanzi 访问统计 -->
-  <script
-    async
-    src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js">
-  </script>
-
   <div class="footer-meta-line">
     <span>&copy; {{ site.time | date: '%Y' }}</span>
     <span class="footer-meta-separator">|</span>
 
-    <span id="sitetime">🕓 Loading site time...</span>
+    <span id="sitetime">🕓 Online since July 24, 2023</span>
     <span class="footer-meta-separator">|</span>
 
-    <span id="busuanzi_container_site_uv">
-      👤 Total visitors&nbsp;<span id="busuanzi_value_site_uv"></span>
+    <span>
+      👤 Total visitors&nbsp;<span id="busuanzi_site_uv">…</span>
     </span>
     <span class="footer-meta-separator">|</span>
 
-    <span id="busuanzi_container_site_pv">
-      👁️ Total views&nbsp;<span id="busuanzi_value_site_pv"></span>
+    <span>
+      👁️ Total views&nbsp;<span id="busuanzi_site_pv">…</span>
     </span>
     <span class="footer-meta-separator">|</span>
 
@@ -136,33 +130,34 @@
     </span>
   </div>
 
-  <!-- 建站运行时间 -->
+  <!-- 建站运行时间：使用兼容性更高的 ES5 写法 -->
   <script>
   (function () {
-    'use strict';
+    function startSiteClock() {
+      var element = document.getElementById('sitetime');
+      if (!element) {
+        return;
+      }
 
-    // JavaScript 月份从 0 开始；6 代表 7 月。
-    const siteStartTime = new Date(2023, 6, 24, 20, 0, 0).getTime();
+      var siteStartTime = new Date(2023, 6, 24, 20, 0, 0).getTime();
 
-    function updateSiteTime() {
-      const difference = Math.max(0, Date.now() - siteStartTime);
-      const totalSeconds = Math.floor(difference / 1000);
-      const secondsPerMinute = 60;
-      const secondsPerHour = 60 * secondsPerMinute;
-      const secondsPerDay = 24 * secondsPerHour;
-      const secondsPerYear = 365 * secondsPerDay;
+      function updateSiteTime() {
+        var difference = Math.max(0, Date.now() - siteStartTime);
+        var totalSeconds = Math.floor(difference / 1000);
+        var secondsPerMinute = 60;
+        var secondsPerHour = 60 * secondsPerMinute;
+        var secondsPerDay = 24 * secondsPerHour;
+        var secondsPerYear = 365 * secondsPerDay;
 
-      const years = Math.floor(totalSeconds / secondsPerYear);
-      const secondsAfterYears = totalSeconds - years * secondsPerYear;
-      const days = Math.floor(secondsAfterYears / secondsPerDay);
-      const secondsAfterDays = secondsAfterYears - days * secondsPerDay;
-      const hours = Math.floor(secondsAfterDays / secondsPerHour);
-      const secondsAfterHours = secondsAfterDays - hours * secondsPerHour;
-      const minutes = Math.floor(secondsAfterHours / secondsPerMinute);
-      const seconds = secondsAfterHours - minutes * secondsPerMinute;
-      const element = document.getElementById('sitetime');
+        var years = Math.floor(totalSeconds / secondsPerYear);
+        var remaining = totalSeconds - years * secondsPerYear;
+        var days = Math.floor(remaining / secondsPerDay);
+        remaining -= days * secondsPerDay;
+        var hours = Math.floor(remaining / secondsPerHour);
+        remaining -= hours * secondsPerHour;
+        var minutes = Math.floor(remaining / secondsPerMinute);
+        var seconds = remaining - minutes * secondsPerMinute;
 
-      if (element) {
         element.textContent =
           '🕓 already run ' +
           years + ' years ' +
@@ -172,10 +167,15 @@
           seconds + ' s';
       }
 
-      window.setTimeout(updateSiteTime, 1000);
+      updateSiteTime();
+      window.setInterval(updateSiteTime, 1000);
     }
 
-    updateSiteTime();
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', startSiteClock);
+    } else {
+      startSiteClock();
+    }
   })();
   </script>
 
@@ -644,6 +644,13 @@
       window.addEventListener('load', scheduleVisitorLog, { once: true });
     }
   })();
+  </script>
+
+
+  <!-- 不蒜子 3.x：官方当前推荐的统计脚本 -->
+  <script
+    src="https://cdn.busuanzi.cc/busuanzi/3.6.9/busuanzi.min.js"
+    defer>
   </script>
 
 </div>
