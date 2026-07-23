@@ -1,197 +1,125 @@
-```yaml
-# =========================================================
+# Welcome to Jekyll!
+#
+# This config file is meant for settings that affect your entire site, values
+# which you are expected to set up once and rarely need to edit after that.
+# For technical reasons, this file is *NOT* reloaded automatically when you use
+# `jekyll serve`. If you change this file, please restart the server process.
+
 # Theme Settings
-# =========================================================
+#
+# Review documentation to determine if you should use `theme` or `remote_theme`
+# https://mmistakes.github.io/minimal-mistakes/docs/quick-start-guide/#installing-the-theme
+# theme                  : "minimal-mistakes-jekyll"
+# remote_theme           : "mmistakes/minimal-mistakes"
+minimal_mistakes_skin  : "sunrise"  # "air", "contrast", "aqua", "mint", "dark", "dirt", "neon", "plum"
 
-minimal_mistakes_skin: "sunrise"
-# Available skins:
-# air, contrast, aqua, mint, dark, dirt, neon, plum, sunrise
-
-
-# =========================================================
 # Site Settings
-# =========================================================
-
-locale: "en-US"
-
-title: "Meng Gao (高萌)"
-title_separator: "-"
-name: &name "Meng Gao (高萌)"
-
-description: &description >-
-  Associate Professor at the China School of Banking and Finance,
-  University of International Business and Economics.
-  Research fields: Corporate Governance, Corporate Finance,
-  Behavioral Finance, and ESG.
-
-url: "https://menggaosite.github.io"
-baseurl: ""
-repository: "menggaosite/menggaosite.github.io"
-
-teaser:
-logo:
-
-breadcrumbs: false
-words_per_minute: 160
-future: true
-read_more: "disabled"
-talkmap_link: false
-
-
-# =========================================================
-# Comments
-# =========================================================
+locale                   : "en-US"
+title                    : "Meng Gao (高萌)"
+title_separator          : "-"
+name                     : &name "Meng Gao (高萌)"
+description              : &description "Associate Professor at the China School of Banking and Finance, University of International Business and Economics. Research fields: Corporate Governance, Corporate Finance, Behavioral Finance, and ESG."
+url                      : "https://menggaosite.github.io"
+baseurl                  : ""
+repository               : "menggaosite/menggaosite.github.io"
+teaser                   :
+logo                     : "/images/smalltitle.png"
+breadcrumbs              : false
+words_per_minute         : 160
+future                   : true
+read_more                : "disabled"
+talkmap_link             : false
 
 comments:
-  provider:
+  provider               :
   disqus:
-    shortname:
+    shortname            :
   discourse:
-    server:
+    server               :
   facebook:
-    appid:
-    num_posts: 100
-    colorscheme:
-
-
-# Staticman is currently disabled because no comment provider
-# is selected. The branch is kept consistent with this repository.
+    appid                :
+    num_posts            : 100
+    colorscheme          :
 
 staticman:
-  allowedFields:
-    - name
-    - email
-    - url
-    - message
-  branch: "main"
-  commitMessage: "New comment."
-  filename: "comment-{@timestamp}"
-  format: "yml"
-  moderation: true
-  path: "_data/comments/{options.slug}"
-  requiredFields:
-    - name
-    - email
-    - message
+  allowedFields          : ['name', 'email', 'url', 'message']
+  branch                 : "gh-pages"
+  commitMessage          : "New comment."
+  filename               : comment-{@timestamp}
+  format                 : "yml"
+  moderation             : true
+  path                   : "_data/comments/{options.slug}"
+  requiredFields         : ['name', 'email', 'message']
   transforms:
-    email: "md5"
+    email                : "md5"
   generatedFields:
     date:
-      type: "date"
+      type               : "date"
       options:
-        format: "iso8601"
-
-
-# =========================================================
-# Feed
-# =========================================================
+        format           : "iso8601"
 
 atom_feed:
-  path:
+  path                   :
 
+# SEO Related
+google_site_verification :
+bing_site_verification   :
+alexa_site_verification  :
+yandex_site_verification :
 
-# =========================================================
-# SEO
-# =========================================================
-
-google_site_verification:
-bing_site_verification:
-alexa_site_verification:
-yandex_site_verification:
-
-
-# =========================================================
 # Social Sharing
-# =========================================================
-
 twitter:
-  username: &twitter
-
+  username               : &twitter
 facebook:
-  username:
-  app_id:
-  publisher:
+  username               :
+  app_id                 :
+  publisher              :
+og_image                 :
 
-og_image:
-
+# For specifying social profiles
 social:
-  type: "Person"
-  name: "Meng Gao"
+  type                   : "Person"
+  name                   : "Meng Gao"
   links:
     - "https://menggaosite.github.io"
-    - "https://sbf.uibe.edu.cn/szdw/xyjs/fjszc/58be8eccef0e4b318497c8ac70a783c8.htm"
 
-
-# =========================================================
 # Analytics
-# =========================================================
-
 analytics:
-  provider:
+  provider               : "google-universal"
   google:
-    tracking_id:
+    tracking_id          :
 
-
-# =========================================================
 # Site Author
-# =========================================================
-
 author:
-  name: "Meng Gao (高萌)"
+  name             : "Meng Gao (高萌)"
+  avatar           : "profile.png"
+  bio              : "Associate Professor, China School of Banking and Finance, University of International Business and Economics"
+  location         : "Beijing, China"
+  location_url     : "https://www.google.com/maps/search/?api=1&query=China+School+of+Banking+and+Finance%2C+University+of+International+Business+and+Economics%2C+No.+10+Huixin+Dongjie%2C+Chaoyang+District%2C+Beijing+100029%2C+China"
+  employer         : "University of International Business and Economics"
+  email            : "meng.gao@uibe.edu.cn"
+  uri              : "https://menggaosite.github.io"
+  github           : "menggaosite"
+  googlescholar    :
+  pubmed           :
+  researchgate     :
+  google_plus      :
+  impactstory      :
+  linkedin         :
+  orcid            :
+  stackoverflow    :
+  twitter          :
+  youtube          :
+  wikipedia        :
 
-  # The template automatically looks for this file in /images/
-  avatar: "profile.png"
-
-  bio: >-
-    Associate Professor, China School of Banking and Finance,
-    University of International Business and Economics
-
-  location: "Beijing, China"
-
-  location_url: >-
-    https://www.google.com/maps/search/?api=1&query=University+of+International+Business+and+Economics%2C+No.+10+Huixin+Dongjie%2C+Chaoyang+District%2C+Beijing+100029%2C+China
-
-  employer: "University of International Business and Economics"
-
-  email: "meng.gao@uibe.edu.cn"
-
-  uri: "https://menggaosite.github.io"
-  github: "menggaosite"
-
-  googlescholar:
-  pubmed:
-  researchgate:
-  google_plus:
-  impactstory:
-  linkedin:
-  orcid:
-  stackoverflow:
-  twitter:
-  youtube:
-  wikipedia:
-
-
-# =========================================================
 # Contact Information
-# =========================================================
-
 contact:
-  email_primary: "meng.gao@uibe.edu.cn"
-  email_secondary:
+  email_primary     : "meng.gao@uibe.edu.cn"
+  email_secondary   :
+  email_uibe        : "meng.gao@uibe.edu.cn"
+  address           : "China School of Banking and Finance, University of International Business and Economics, No. 10 Huixin Dongjie, Chaoyang District, Beijing 100029, P.R. China"
 
-  address: >-
-    China School of Banking and Finance,
-    University of International Business and Economics,
-    No. 10 Huixin Dongjie,
-    Chaoyang District,
-    Beijing 100029,
-    P.R. China
-
-
-# =========================================================
 # Reading Files
-# =========================================================
-
 include:
   - .htaccess
   - _pages
@@ -205,15 +133,11 @@ exclude:
   - .jekyll-assets-cache
   - .sass-cache
   - CHANGELOG
-  - CHANGELOG.md
   - Capfile
   - Gemfile
-  - Gemfile.lock
   - Gruntfile.js
   - LICENSE
-  - LICENSE.md
   - README
-  - README.md
   - Rakefile
   - assets/js/_main.js
   - assets/js/plugins
@@ -221,11 +145,8 @@ exclude:
   - config
   - gulpfile.js
   - log
-  - markdown_generator
   - node_modules
   - package.json
-  - talkmap.ipynb
-  - talkmap.py
   - tmp
   - vendor
 
@@ -236,17 +157,14 @@ keep_files:
 encoding: "utf-8"
 markdown_ext: "markdown,mkdown,mkdn,mkd,md"
 
-
-# =========================================================
-# Markdown Conversion
-# =========================================================
-
+# Conversion
 markdown: kramdown
 highlighter: rouge
 lsi: false
 excerpt_separator: "\n\n"
 incremental: false
 
+# Markdown Processing
 kramdown:
   input: GFM
   hard_wrap: false
@@ -254,47 +172,21 @@ kramdown:
   footnote_nr: 1
   entity_output: as_char
   toc_levels: 1..6
-  smart_quotes: "lsquo,rsquo,ldquo,rdquo"
+  smart_quotes: lsquo,rsquo,ldquo,rdquo
   enable_coderay: false
 
-
-# =========================================================
 # Collections
-# These names match the existing folders in the repository.
-# =========================================================
-
 collections:
-  publications:
-    output: true
-    permalink: /publication/:path/
-
-  talks:
-    output: true
-    permalink: /talks/:path/
-
   teaching:
     output: true
-    permalink: /teaching/:path/
-
-  portfolio:
+    permalink: /:collection/:path/
+  papers:
     output: true
-    permalink: /portfolio/:path/
+    permalink: /:collection/:path/
 
-  projects:
-    output: true
-    permalink: /projects/:path/
-
-  others:
-    output: true
-    permalink: /others/:path/
-
-
-# =========================================================
-# Default Page Settings
-# =========================================================
-
+# Defaults
 defaults:
-  # Posts
+  # _posts
   - scope:
       path: ""
       type: posts
@@ -302,11 +194,11 @@ defaults:
       layout: single
       author_profile: true
       read_time: true
-      comments: false
+      comments: true
       share: true
       related: true
 
-  # Pages
+  # _pages
   - scope:
       path: ""
       type: pages
@@ -314,102 +206,41 @@ defaults:
       layout: single
       author_profile: true
 
-  # Publications
+  # _papers
   - scope:
       path: ""
-      type: publications
+      type: papers
     values:
       layout: single
       author_profile: true
       share: true
 
-  # Talks
-  - scope:
-      path: ""
-      type: talks
-    values:
-      layout: talk
-      author_profile: true
-      share: true
-
-  # Teaching
-  - scope:
-      path: ""
-      type: teaching
-    values:
-      layout: single
-      author_profile: true
-      share: true
-
-  # Portfolio
-  - scope:
-      path: ""
-      type: portfolio
-    values:
-      layout: single
-      author_profile: true
-      share: true
-
-  # Projects
-  - scope:
-      path: ""
-      type: projects
-    values:
-      layout: single
-      author_profile: true
-      share: true
-
-  # Other materials
-  - scope:
-      path: ""
-      type: others
-    values:
-      layout: single
-      author_profile: true
-
-
-# =========================================================
-# Sass / SCSS
-# =========================================================
-
+# Sass/SCSS
 sass:
   sass_dir: _sass
   style: compressed
 
-
-# =========================================================
-# Output
-# =========================================================
-
+# Outputting
 permalink: /:categories/:title/
-timezone: "Asia/Shanghai"
+timezone: Asia/Shanghai
 
-
-# =========================================================
 # Plugins
-# =========================================================
-
 plugins:
   - jekyll-paginate
   - jekyll-sitemap
   - jekyll-gist
   - jekyll-feed
   - jekyll-redirect-from
-  - jemoji
 
+# Mimic GitHub Pages with --safe
 whitelist:
   - jekyll-paginate
   - jekyll-sitemap
   - jekyll-gist
   - jekyll-feed
-  - jekyll-redirect-from
   - jemoji
 
-
-# =========================================================
 # Archives
-# =========================================================
-
 category_archive:
   type: liquid
   path: /categories/
@@ -418,21 +249,12 @@ tag_archive:
   type: liquid
   path: /tags/
 
-
-# =========================================================
 # HTML Compression
-# =========================================================
-
 compress_html:
   clippings: all
   ignore:
     envs: development
 
-
-# =========================================================
-# Theme Toggle
-# =========================================================
-
+# Theme toggle
 toggle:
   theme: true
-```
