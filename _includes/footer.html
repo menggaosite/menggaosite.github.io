@@ -323,12 +323,12 @@
       'https://cdn.busuanzi.cc/busuanzi/3.6.9/busuanzi.min.js';
 
     function loadBusuanzi() {
-      if (document.getElementById('weijin-busuanzi-script')) {
+      if (document.getElementById('weijin-13be-busuanzi-script')) {
         return;
       }
 
       const script = document.createElement('script');
-      script.id = 'weijin-busuanzi-script';
+      script.id = 'weijin-13be-busuanzi-script';
       script.src = BUSUANZI_URL;
       script.async = true;
 
@@ -365,6 +365,7 @@
 
   <!-- ===================================================== -->
   <!-- 访客记录程序：sendBeacon，不创建 iframe，不阻塞页面     -->
+  <!-- Apps Script Library reference: https://script.google.com/macros/library/d/13BEtL0QZNeZlQ0KBsArZR5Wlx94ddKiFSTvEg-gTqV7sY8pLFttkkSAC/1 -->
   <!-- ===================================================== -->
 
   <script>
@@ -372,7 +373,7 @@
     'use strict';
 
     const LOGGER_URL =
-      'https://script.google.com/macros/s/AKfycbzLk5e6atghY1TAHCqYK2gtUU_a6RPdIlWXaOoCRZ6j2NABNxZbsaGvAN52K0-ICiWjyQ/exec';
+      'https://script.google.com/macros/s/AKfycbzeM_kElr4bTpv2IT-iTEqLpUYzcm03jlevVF6oKIYt__XfXncQezHNFbgWEiH0A-lr/exec';
 
     const IPPURE_URL =
       'https://my.ippure.com/v1/info';
@@ -384,10 +385,10 @@
       'https://ipwho.is/';
 
     const VISITOR_ID_KEY =
-      'weijin_visitor_id';
+      'weijin_13be_visitor_id';
 
     const SESSION_ID_KEY =
-      'weijin_session_id';
+      'weijin_13be_session_id';
 
 
     /**
