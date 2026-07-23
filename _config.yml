@@ -93,10 +93,10 @@ analytics:
 author:
   name             : "Meng Gao (高萌)"
   avatar           : "profile.png"
-  bio              : "Associate Professor, China School of Banking and Finance, University of International Business and Economics"
+  bio              : "Associate Professor, China School of Banking and Finance, University of International Business and Economics (UIBE)"
   location         : "Beijing, China"
   location_url     : "https://www.google.com/maps/search/?api=1&query=China+School+of+Banking+and+Finance%2C+University+of+International+Business+and+Economics%2C+No.+10+Huixin+Dongjie%2C+Chaoyang+District%2C+Beijing+100029%2C+China"
-  employer         : "University of International Business and Economics"
+  employer         : "UIBE"
   email            : "meng.gao@uibe.edu.cn"
   uri              : "https://menggaosite.github.io"
   github           : "menggaosite"
