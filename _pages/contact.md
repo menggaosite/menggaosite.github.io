@@ -10,13 +10,11 @@ author_profile: true
 
 ## Contact Information
 
-Email: wei.jin.economics [at] gmail.com  
-Email: wei.jin.economics [at] foxmail.com  
-Email: wei.jin [at] nankai.edu.cn  
+Email: meng.gao [at] uibe.edu.cn  
 
 ## Address
 
-School of Economics, Nankai University, No. 94 Weijin Road, Nankai District, Tianjin 300071, P.R. China 
+China School of Banking and Finance, University of International Business and Economics, 10 Huixin Dongjie, Chaoyang District, Beijing 100029, P.R. China 
 
 
 
